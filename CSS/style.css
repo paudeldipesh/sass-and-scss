@@ -1,0 +1,75 @@
+/*
+1. Variables
+2. Nesting
+3. Operators
+4. Map
+5. Ampersand (&)
+6. Mixin
+7. Extend
+8. Partials
+*/
+.anchor, header nav a {
+  color: brown;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.button, header button {
+  padding: 5px 10px;
+  background-color: black;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+}
+
+body {
+  background-color: orangered;
+}
+
+header {
+  font-family: sans-serif;
+  background-color: lightgray;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+header h2 {
+  font-size: 20px;
+}
+header h2::before {
+  content: "Company ";
+}
+header h2::after {
+  content: " Looks";
+}
+header nav a {
+  margin-right: 16px;
+}
+header nav a:hover {
+  color: black;
+}
+h1 {
+  color: white;
+  font-size: 50px;
+  text-align: center;
+}
+
+p {
+  font-size: 25px;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  h1 {
+    font-size: 16px;
+  }
+}/*# sourceMappingURL=style.css.map */

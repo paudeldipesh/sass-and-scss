@@ -1,0 +1,33 @@
+.anchor {
+  color: brown;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.button {
+  padding: 5px 10px;
+  background-color: black;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+}
+
+$bg-clr: orangered;
+$txt-clr: white;
+$fnt-lg: 50px;
+$fnt-sm: 25px;
+
+$font-size-map: (
+  "mobile": 16px,
+  "tablet": 25px,
+  "desktop": 75px,
+);
+
+@mixin flexbox($fle-dir, $jus-con, $ali-ite: center) {
+  display: flex;
+  flex-direction: $fle-dir;
+  justify-content: $jus-con;
+  align-items: $ali-ite;
+}

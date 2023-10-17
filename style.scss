@@ -1,0 +1,70 @@
+/*
+1. Variables
+2. Nesting
+3. Operators
+4. Map
+5. Ampersand (&)
+6. Mixin
+7. Extend
+8. Partials
+*/
+
+@import "common";
+
+body {
+  background-color: $bg-clr;
+}
+
+header {
+  font-family: sans-serif;
+  background-color: lightgray;
+  @include flexbox(row, space-between, center);
+  padding: 0 10px * 2;
+
+  h2 {
+    font-size: $fnt-sm - 5;
+
+    &::before {
+      content: "Company ";
+    }
+
+    &::after {
+      content: " Looks";
+    }
+  }
+
+  nav {
+    a {
+      @extend .anchor;
+      margin-right: 2px * 8;
+
+      &:hover {
+        color: black;
+      }
+    }
+  }
+
+  button {
+    @extend .button;
+  }
+}
+
+h1 {
+  color: $txt-clr;
+  font-size: $fnt-lg;
+  text-align: center;
+}
+
+p {
+  font-size: map-get($map: $font-size-map, $key: "tablet");
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    @include flexbox(column, space-between, center);
+  }
+
+  h1 {
+    font-size: map-get($map: $font-size-map, $key: "mobile");
+  }
+}

@@ -1,0 +1,9 @@
+@import "common";
+
+button {
+  @extend .button;
+}
+
+a {
+  @extend .anchor;
+}
